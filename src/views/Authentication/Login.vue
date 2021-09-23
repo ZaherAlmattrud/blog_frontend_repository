@@ -5,7 +5,7 @@
 
   <authentication-layout>
 
-  <v-form   >
+  <v-form    >
     <v-container>
       <v-row>
         <v-col
@@ -13,13 +13,18 @@
           md="4"
            align="center"
         >
-          <v-text-field
-            v-model="authInformation.email"
-            label="E-mail"
+       
+    <v-text-field
+
+             v-model="authInformation.email"
+            label="البريد الألكتروني"
+             type="email"
             required
-              type="email"
-            autocomplete="new-password"
+         autocomplete="new-password"
              
+            outlined
+             
+         :prepend-inner-icon="mdiEmailOutline"
           ></v-text-field>
         </v-col>
       </v-row>
@@ -29,13 +34,19 @@
           cols="12"
           md="4"
         >
-          <v-text-field
-            v-model="authInformation.password"
-            label="Password"
+           
+
+           <v-text-field
+
+             v-model="authInformation.password"
+            label="كلمة المرور"
              type="password"
             required
+        
             autocomplete="new-password"
-          
+            outlined
+             
+         :prepend-inner-icon="mdiLockOutline"
           ></v-text-field>
         </v-col>
       </v-row>
@@ -48,7 +59,7 @@
 
         <v-btn
       depressed
-      color="primary"
+      color="success"
 
       @click="login"
     >
@@ -79,11 +90,16 @@
 
 import AuthenticationLayout  from '../../layouts/AuthenticationLayout.vue'
 
- 
+ import { mdiAccountCircleOutline } from '@mdi/js';
+import { mdiEmailOutline } from '@mdi/js';
+import { mdiLockOutline } from '@mdi/js';
 export default {
     name:"login",
     data(){
         return {
+          mdiEmailOutline:mdiEmailOutline,
+          mdiAccountCircleOutline:mdiAccountCircleOutline,
+          mdiLockOutline:mdiLockOutline,
             authInformation:{
                 email:"",
                 password:""
