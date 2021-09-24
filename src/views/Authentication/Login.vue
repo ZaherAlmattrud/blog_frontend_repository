@@ -5,13 +5,25 @@
 
   <authentication-layout>
 
-  <v-form    >
-    <v-container>
-      <v-row>
+  <v-form  >
+    <v-container  class="  mt-15 loginForm">
+
+      <v-row align="center" justify="center" class="text-center" >
         <v-col
-          cols="12"
+          
           md="4"
-           align="center"
+            
+        >
+
+        <label class="brown--text">تســـــــــــــــــــــــــــــــــــجيل الدخول</label>
+        </v-col>
+      </v-row>
+      
+      <v-row align="center" justify="center"  >
+        <v-col
+          
+          md="4"
+            
         >
        
     <v-text-field
@@ -29,9 +41,9 @@
         </v-col>
       </v-row>
 
-       <v-row>
+       <v-row align="center" justify="center">
         <v-col
-          cols="12"
+        
           md="4"
         >
            
@@ -50,10 +62,10 @@
           ></v-text-field>
         </v-col>
       </v-row>
-      <v-row>
+      <v-row align="center" justify="center">
 
            <v-col
-          cols="12"
+         
           md="4"
         >
 
@@ -63,23 +75,25 @@
 
       @click="login"
     >
-      Login
+      تســـــــــــــــــــــــــــــــــــجيل الدخول
     </v-btn>
-           </v-col>
-               <v-col
-          cols="12"
-          md="4"
-        >
-    <v-btn
-      depressed
+     <v-btn
+     
       color="error"
       @click="clear"
+     class=" mr-5"
+      min-width="5"
     >
-      Cancel
+      الغاء الأمر
     </v-btn>
-               </v-col>
+           </v-col>
+         
+   
+               
       </v-row>
+       
     </v-container>
+   
   </v-form>
 
   </authentication-layout>
@@ -135,3 +149,9 @@ export default {
 
 }
 </script>
+<style scoped>
+.loginForm{
+ 
+    
+}
+</style>
